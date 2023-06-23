@@ -16,11 +16,11 @@ const authRoutes = require('./routes/auth')
 const postRoutes = require('./routes/post')
 
 app.use('/auth', authRoutes)
-app.use('/post', postRoutes)
+app.use('/', postRoutes)
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
+// app.get('/', (req, res) => {
+//     res.send('Hello World!')
+// })
 
 mongoose.connect(process.env.DB_CONNECTION, {
     useNewUrlParser: true,
