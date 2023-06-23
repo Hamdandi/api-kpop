@@ -22,7 +22,7 @@ app.use('/', postRoutes)
 //     res.send('Hello World!')
 // })
 
-mongoose.connect(process.env.DB_CONNECTION, {
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
